@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import "./Navbar.css"
+import {MdOutlineFastfood} from 'react-icons/md'
 const Navbar = () => {
   const navLinks=<>
   
@@ -30,7 +31,7 @@ const Navbar = () => {
         <li id='sidebar'><NavLink to="/login">Login</NavLink></li>
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+    <a className="btn btn-ghost normal-case text-xl"><MdOutlineFastfood></MdOutlineFastfood>Eat Link </a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

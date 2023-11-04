@@ -1,7 +1,7 @@
 [
     {
         "food_name": "Spaghetti Carbonara",
-        "img": "spaghetti_carbonara.jpg",
+        "img": "https://i.ibb.co/7GSCwrs/Spaghetti.jpg",
         "category": "Pasta",
         "quantity": 18,
         "price": 12.99,
@@ -11,7 +11,7 @@
     },
     {
         "food_name": "Sushi Platter",
-        "img": "sushi_platter.jpg",
+        "img": "https://i.ibb.co/ydZcjDk/Sashimi-Bowl.jpg",
         "category": "Japanese",
         "quantity": 15,
         "price": 24.99,
@@ -21,7 +21,7 @@
     },
     {
         "food_name": "Chicken Tikka Masala",
-        "img": "chicken_tikka_masala.jpg",
+        "img": "https://i.ibb.co/g91j5SX/Chicken-Tikka-Masala.jpg",
         "category": "Indian",
         "quantity": 25,
         "price": 15.99,
@@ -31,7 +31,7 @@
     },
     {
         "food_name": "Caesar Salad",
-        "img": "caesar_salad.jpg",
+        "img": "https://i.ibb.co/98ZvP0f/Caesar-Salad.jpg",
         "category": "Salad",
         "quantity": 20,
         "price": 8.99,
@@ -41,7 +41,7 @@
     },
     {
         "food_name": "Croissant",
-        "img": "croissant.jpg",
+        "img": "https://i.ibb.co/wLskwGK/Croissant.jpg",
         "category": "Bakery",
         "quantity": 18,
         "price": 2.49,
@@ -51,7 +51,7 @@
     },
     {
         "food_name": "Miso Soup",
-        "img": "miso_soup.jpg",
+        "img": "https://i.ibb.co/C7jfVfG/Miso-Soup.jpg",
         "category": "Japanese",
         "quantity": 30,
         "price": 5.99,
@@ -61,7 +61,7 @@
     },
     {
         "food_name": "Margherita Pizza",
-        "img": "margherita_pizza.jpg",
+        "img": "https://i.ibb.co/Hh0ZD5G/Margherita-Pizza.jpg",
         "category": "Pizza",
         "quantity": 16,
         "price": 11.99,
@@ -71,7 +71,7 @@
     },
     {
         "food_name": "Pad Thai",
-        "img": "pad_thai.jpg",
+        "img": "https://i.ibb.co/mRLLrbD/Pad-Thai.jpg",
         "category": "Thai",
         "quantity": 35,
         "price": 13.99,
@@ -81,7 +81,7 @@
     },
     {
         "food_name": "Hamburger",
-        "img": "hamburger.jpg",
+        "img": "https://i.ibb.co/xSCry27/Hamburger.jpg",
         "category": "American",
         "quantity": 14,
         "price": 9.99,
@@ -91,7 +91,7 @@
     },
     {
         "food_name": "Sashimi Bowl",
-        "img": "sashimi_bowl.jpg",
+        "img": "https://i.ibb.co/ydZcjDk/Sashimi-Bowl.jpg",
         "category": "Japanese",
         "quantity": 40,
         "price": 28.99,
@@ -101,7 +101,7 @@
     },
     {
         "food_name": "Creme Brulee",
-        "img": "creme_brulee.jpg",
+        "img": "https://i.ibb.co/wLskwGK/Creme-Brulee.jpg",
         "category": "Dessert",
         "quantity": 12,
         "price": 7.99,
@@ -111,7 +111,7 @@
     },
     {
         "food_name": "Kimchi Fried Rice",
-        "img": "kimchi_fried_rice.jpg",
+        "img": "https://i.ibb.co/3ygRSnx/Kimchi-Fried-Rice.jpg",
         "category": "Korean",
         "quantity": 30,
         "price": 10.99,
@@ -121,7 +121,7 @@
     },
     {
         "food_name": "Fish and Chips",
-        "img": "fish_and_chips.jpg",
+        "img": "https://i.ibb.co/489F9RY/Fish-and-Chips.jpg",
         "category": "British",
         "quantity": 38,
         "price": 11.99,
