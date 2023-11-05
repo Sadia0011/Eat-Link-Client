@@ -11,9 +11,8 @@ const Footer = () => {
         </aside> 
         <div className="flex flex-col underline lg:flex-row gap-4 md:place-self-center md:justify-self-end">
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/addedFood">My Added Food Items</NavLink>
-          <NavLink to="/add">Add a  Food Items</NavLink>
-          <NavLink to="/orderedFood">My Ordered Food Items</NavLink>
+        <NavLink to="/allFoodItems">All Food Items</NavLink>
+        <NavLink to="/blog">Blog</NavLink>
         </div>
         <p className='my-3'>Copyright © 2023 - All right reserved</p>
       </footer>

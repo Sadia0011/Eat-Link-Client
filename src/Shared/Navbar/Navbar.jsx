@@ -2,11 +2,10 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import "./Navbar.css"
 import {MdOutlineFastfood} from 'react-icons/md'
+import useAuth from '../../Hooks/useAuth';
 const Navbar = () => {
-  const navLinks=<>
-  
-  
-  </>
+  const navLinks=<></>
+  const {user}=useAuth()
     return (
         <div className="navbar bg-base-100 sticky">
 <div className='max-w-7xl flex  mx-auto'>
@@ -19,16 +18,16 @@ const Navbar = () => {
         <li id='sidebar'><NavLink to="/" >Home</NavLink></li>
         <li id='sidebar'><NavLink to="/allFoodItems">All Food Items</NavLink></li>
         <li id='sidebar'><NavLink to="/blog">Blog</NavLink></li>
-        <li>
-          <a>User</a>
+       {user?.email && <li>
+          <a>{user?.displayName  ? user.displayName  : 'unknown'}</a>
           <ul className="p-2">
             <li id='sidebar'><NavLink to="/addedFood">My Added Food Items</NavLink></li>
             <li id='sidebar'><NavLink to="/add">Add a  Food Items</NavLink></li>
             <li id='sidebar'><NavLink to="/orderedFood">My Ordered Food Items</NavLink></li>
             
           </ul>
-        </li>
-        <li id='sidebar'><NavLink to="/login">Login</NavLink></li>
+        </li>}
+      {user?.email ?<><button className='btn btn-sm bg-orange-400 text-white'>LogOut</button> </> : <li id='sidebar'><NavLink to="/login">Login</NavLink></li>}
       </ul>
     </div>
     <a className="btn btn-ghost normal-case text-xl"><MdOutlineFastfood className='text-orange-400'></MdOutlineFastfood>Eat Link </a>
@@ -38,9 +37,9 @@ const Navbar = () => {
         <li id='sidebar'><NavLink to="/" >Home</NavLink></li>
         <li id='sidebar'><NavLink to="/allFoodItems">All Food Items</NavLink></li>
         <li id='sidebar'><NavLink to="/blog">Blog</NavLink></li>
-      <li tabIndex={0}>
+     {user?.email && <li tabIndex={0}>
         <details>
-          <summary>User</summary>
+          <summary>{user?.displayName  ? user.displayName  : 'unknown'}</summary>
           <ul className="p-2">
             <li id='sidebar'><NavLink to="/addedFood">My Added Food Items</NavLink></li>
             <li id='sidebar'><NavLink to="/add">Add a  Food Items</NavLink></li>
@@ -48,9 +47,9 @@ const Navbar = () => {
             
           </ul>
         </details>
-      </li>
+      </li>}
      
-      <li id='sidebar'><NavLink to="/login">Login</NavLink></li>
+    {user?.email ?<><button className='btn btn-sm bg-orange-400 text-white'>Log Out</button></> : <li id='sidebar'><NavLink to="/login">Login</NavLink></li>}
     </ul>
   </div>
 </div>
