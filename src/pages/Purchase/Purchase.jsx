@@ -23,7 +23,7 @@ const Purchase = () => {
         <h3 className="text-xl"><span className='font-bold'>Category :</span> {category}</h3>
         <h3 className="text-xl"><span className='font-bold'>Price :</span> ${price}</h3>
         <h3 className="text-xl"><span className='font-bold'>Quantity :</span> {quantity}</h3>
-       <div className='flex flex-col justify-center items-center'>
+       <div className='flex flex-col lg:flex-row gap-3 justify-center items-center'>
        <button className='btn bg-orange-400 text-white'>Purchase</button>
        <button
        onClick={()=>{navigate(-1)}}
