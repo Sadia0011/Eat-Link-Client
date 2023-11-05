@@ -11,6 +11,8 @@ import Blog from '../pages/Blog/Blog';
 
 import Reg from '../pages/Reg/Reg';
 import SignIn from '../pages/Login/SignIn';
+import SingleFoodPage from '../pages/SingleFoodPage/SingleFoodPage';
+import Purchase from '../pages/Purchase/Purchase';
 const Router = createBrowserRouter([
     {
         path: "/",
@@ -25,6 +27,16 @@ const Router = createBrowserRouter([
                 path:"/allFoodItems",
                 element:<AllFoodItems></AllFoodItems>,
                 loader:()=>fetch("http://localhost:5000/allfooditems")
+            },
+            {
+                path:"/allfooditems/:id",
+                element:<SingleFoodPage></SingleFoodPage>,
+                loader:({params})=>fetch(`http://localhost:5000/allfooditems/${params.id}`)
+            },
+            {
+                path:"/purchase/:id",
+                element:<Purchase></Purchase>,
+                loader:({params})=>fetch(`http://localhost:5000/allfooditems/${params.id}`)
             },
             {
                 path:"/blog",

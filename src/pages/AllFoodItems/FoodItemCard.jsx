@@ -1,10 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FoodItemCard = ({allFoodItem}) => {
     const {_id,food_name,img,category,price,quantity}=allFoodItem;
-    const handleDetails=id=>{
-        console.log(id)
-    }
+   
     return (
         <div>
             
@@ -18,9 +17,15 @@ const FoodItemCard = ({allFoodItem}) => {
             <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"><span className='text-orange-800'>Quantity :</span> {quantity}</h5>       
         <div className="flex items-center justify-between">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">${price}</h2>
-            <button 
-            onClick={()=>handleDetails(_id)}
-            className="text-white bg-orange-400 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-orange-600 dark:hover:bg-orange-400 dark:focus:ring-orange-800">Details</button>
+         <Link to={`/allfooditems/${_id}`}>
+         <button 
+            className="text-white bg-orange-400 
+            hover:bg-orange-800 focus:ring-4 focus:outline-none 
+            focus:ring-blue-300 font-medium rounded-lg text-sm 
+            px-5 py-2.5 text-center dark:bg-orange-600 
+            dark:hover:bg-orange-400
+            dark:focus:ring-orange-800">Details</button>
+         </Link>
         </div>
     </div>
 </div>
