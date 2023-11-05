@@ -8,8 +8,9 @@ import ErrorPage from '../pages/ErrorPage';
 import Home from '../pages/Home/Home/Home';
 import AllFoodItems from '../pages/AllFoodItems/AllFoodItems';
 import Blog from '../pages/Blog/Blog';
-import LOgin from '../pages/Login/LOgin';
+
 import Reg from '../pages/Reg/Reg';
+import SignIn from '../pages/Login/SignIn';
 const Router = createBrowserRouter([
     {
         path: "/",
@@ -30,7 +31,7 @@ const Router = createBrowserRouter([
             },
             {
                 path:"/login",
-                element:<LOgin></LOgin>
+                element:<SignIn></SignIn>
             },
             {
                 path:"/reg",
