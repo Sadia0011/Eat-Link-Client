@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
@@ -38,9 +38,22 @@ const Reg = () => {
       const result = await createUser(profile, email, password)
         .then(async (result) => {
           console.log(result);
+          const response=await fetch("http://localhost:5000/user",{
+            method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ profile, email, password })
+          })
+          if (response.ok) {
+            console.log('User information posted to MongoDB');
+          } else {
+            throw new Error('Failed to post user information to MongoDB');
+          }
         })
         .catch((error) => console.log("error from sign up", error));
       toast("Congratulations,registration successful");
+      
       setTimeout(() => {
         navigate("/login");
       }, 1000);

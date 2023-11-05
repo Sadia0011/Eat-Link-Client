@@ -5,7 +5,8 @@ import {MdOutlineFastfood} from 'react-icons/md'
 import useAuth from '../../Hooks/useAuth';
 const Navbar = () => {
   const navLinks=<></>
-  const {user}=useAuth()
+  const {user,logOut}=useAuth()
+   
     return (
         <div className="navbar bg-base-100 sticky">
 <div className='lg:max-w-7xl flex  mx-auto'>
@@ -27,7 +28,7 @@ const Navbar = () => {
             
           </ul>
         </li>}
-      {user?.email ?<><button className='btn btn-sm bg-orange-400 text-white'>LogOut</button> </> : <li id='sidebar'><NavLink to="/login">Login</NavLink></li>}
+      {user?.email ?<><button onClick={()=>logOut()} className='btn btn-sm bg-orange-400 text-white'>LogOut</button> </> : <li id='sidebar'><NavLink to="/login">Login</NavLink></li>}
       </ul>
     </div>
     <a className="btn btn-ghost normal-case text-xl"><MdOutlineFastfood className='text-orange-400'></MdOutlineFastfood>Eat Link </a>
@@ -49,7 +50,7 @@ const Navbar = () => {
         </details>
       </li>}
      
-    {user?.email ?<><button className='btn btn-sm bg-orange-400 text-white'>Log Out</button></> : <li id='sidebar'><NavLink to="/login">Login</NavLink></li>}
+    {user?.email ?<><button onClick={()=>logOut()} className='btn btn-sm bg-orange-400 text-white'>Log Out</button></> : <li id='sidebar'><NavLink to="/login">Login</NavLink></li>}
     </ul>
   </div>
 </div>
