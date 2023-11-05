@@ -13,6 +13,7 @@ import Reg from '../pages/Reg/Reg';
 import SignIn from '../pages/Login/SignIn';
 import SingleFoodPage from '../pages/SingleFoodPage/SingleFoodPage';
 import Purchase from '../pages/Purchase/Purchase';
+import PrivateRoute from './PrivateRoute';
 const Router = createBrowserRouter([
     {
         path: "/",
@@ -35,7 +36,7 @@ const Router = createBrowserRouter([
             },
             {
                 path:"/purchase/:id",
-                element:<Purchase></Purchase>,
+                element:<PrivateRoute><Purchase></Purchase></PrivateRoute>,
                 loader:({params})=>fetch(`http://localhost:5000/allfooditems/${params.id}`)
             },
             {
