@@ -22,9 +22,9 @@ const Navbar = () => {
        {user?.email && <li>
           <a>{user?.displayName  ? user.displayName  : 'unknown'}</a>
           <ul className="p-2">
-            <li id='sidebar'><NavLink to="/addedFood">My Added Food Items</NavLink></li>
+            <li id='sidebar'><NavLink to="/myAddedFood">My Added Food Items</NavLink></li>
             <li id='sidebar'><NavLink to="/add">Add a  Food Items</NavLink></li>
-            <li id='sidebar'><NavLink to="/orderedFood">My Ordered Food Items</NavLink></li>
+            <li id='sidebar'><NavLink to="/myOrderedFood">My Ordered Food Items</NavLink></li>
             
           </ul>
         </li>}
@@ -42,9 +42,9 @@ const Navbar = () => {
         <details>
           <summary>{user?.displayName  ? user.displayName  : 'unknown'}</summary>
           <ul className="p-2">
-            <li id='sidebar'><NavLink to="/addedFood">My Added Food Items</NavLink></li>
+            <li id='sidebar'><NavLink to="/myAddedFood">My Added Food Items</NavLink></li>
             <li id='sidebar'><NavLink to="/add">Add a  Food Items</NavLink></li>
-            <li id='sidebar'><NavLink to="/orderedFood">My Ordered Food Items</NavLink></li>
+            <li id='sidebar'><NavLink to="/myOrderedFood">My Ordered Food Items</NavLink></li>
             
           </ul>
         </details>

@@ -14,6 +14,10 @@ import SignIn from '../pages/Login/SignIn';
 import SingleFoodPage from '../pages/SingleFoodPage/SingleFoodPage';
 import Purchase from '../pages/Purchase/Purchase';
 import PrivateRoute from './PrivateRoute';
+import MyAddedFood from '../pages/MyAddedFoods/MyAddedFood';
+import AddAFood from '../pages/AddAFood/AddAFood';
+import MyOrderedFood from '../pages/MyOrderedFood/MyOrderedFood';
+import UpdateItem from '../pages/UpdateItem/UpdateItem';
 const Router = createBrowserRouter([
     {
         path: "/",
@@ -40,9 +44,27 @@ const Router = createBrowserRouter([
                 loader:({params})=>fetch(`http://localhost:5000/allfooditems/${params.id}`)
             },
             {
+                path:"/updateItem/:id",
+                element:<PrivateRoute><UpdateItem></UpdateItem></PrivateRoute>,
+                loader:({params})=>fetch(`http://localhost:5000/allfooditems/${params.id}`)
+            },
+            {
+                path:"/myAddedFood",
+                element:<PrivateRoute><MyAddedFood></MyAddedFood></PrivateRoute>
+            },
+            {
+                path:"/add",
+                element:<PrivateRoute><AddAFood></AddAFood></PrivateRoute>
+            },
+            {
+                path:"/myOrderedFood",
+                element:<PrivateRoute><MyOrderedFood></MyOrderedFood></PrivateRoute>
+            },
+            {
                 path:"/blog",
                 element:<Blog></Blog>
             },
+           
             {
                 path:"/login",
                 element:<SignIn></SignIn>

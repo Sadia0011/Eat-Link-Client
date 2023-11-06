@@ -7,6 +7,7 @@
         "price": 12.99,
         "made_by": "Giulia Rossi",
         "food_origin": "Italy",
+        "email": "sadia@gmail.com",
         "description": "Spaghetti Carbonara is a classic Italian pasta dish. It is made by tossing hot spaghetti with a mixture of eggs, cheese (usually Pecorino Romano), and guanciale or pancetta. The heat from the pasta cooks the eggs, creating a creamy sauce. Finish with a generous amount of freshly ground black pepper and additional cheese for a delicious and comforting meal."
     },
     {
@@ -17,6 +18,7 @@
         "price": 24.99,
         "made_by": "Takashi Yamamoto",
         "food_origin": "Japan",
+        "email": "sadia@gmail.com",
         "description": "Our Sushi Platter is a carefully curated selection of fresh and high-quality sushi. It includes various types of fish, such as tuna, salmon, and eel, along with other ingredients like rice, seaweed, and vegetables. Each piece is expertly crafted by our skilled sushi chefs, ensuring a delightful and authentic Japanese dining experience."
     },
     {
@@ -27,6 +29,7 @@
         "price": 15.99,
         "made_by": "Aisha Patel",
         "food_origin": "India",
+        "email": "sadia@gmail.com",
         "description": "Chicken Tikka Masala is a popular Indian dish made by marinating chicken pieces in a spiced yogurt mixture and then baking them until tender. The chicken is then added to a rich and creamy tomato-based sauce, flavored with various spices like garam masala, cumin, and coriander. It is best served with naan or rice for a complete and satisfying meal."
     },
     {
@@ -37,6 +40,7 @@
         "price": 8.99,
         "made_by": "Mark Johnson",
         "food_origin": "United States",
+        "email": "sadia@gmail.com",
         "description": "Our Caesar Salad is a refreshing and crunchy mix of romaine lettuce, croutons, Parmesan cheese, and a tangy dressing. To prepare the dressing, combine ingredients such as garlic, Dijon mustard, Worcestershire sauce, lemon juice, and olive oil. Toss the crisp lettuce with the dressing and top with freshly grated Parmesan and homemade croutons for a delightful and wholesome salad."
     },
     {
@@ -47,6 +51,7 @@
         "price": 2.49,
         "made_by": "Sophie Dubois",
         "food_origin": "France",
+        "email": "sadia@gmail.com",
         "description": "Indulge in the buttery and flaky goodness of our freshly baked croissants. To make these French delicacies, we use a laminated dough, which is layered with butter and then rolled and folded multiple times to create the distinct flaky texture. The croissants are then baked until golden brown, resulting in a crispy exterior and a soft, airy interior that pairs perfectly with a cup of coffee or tea."
     },
     {
@@ -57,6 +62,7 @@
         "price": 5.99,
         "made_by": "Hiroshi Nakamura",
         "food_origin": "Japan",
+        "email": "sadia@gmail.com",
         "description": "Our Miso Soup is a traditional Japanese dish made with dashi, a type of soup stock, and miso paste. To prepare, we add ingredients such as tofu, seaweed, and green onions to the broth. The soup is then gently simmered to allow the flavors to meld together, resulting in a comforting and nourishing bowl of soup that's perfect as a starter or a light meal."
     },
     {
@@ -67,6 +73,7 @@
         "price": 11.99,
         "made_by": "Luca Rossi",
         "food_origin": "Italy",
+        "email": "sadia@gmail.com",
         "description": "Our Margherita Pizza is a classic Italian dish that highlights simplicity and quality ingredients. It features a thin crust topped with San Marzano tomato sauce, fresh mozzarella cheese, and basil leaves. The pizza is then baked in a wood-fired oven until the crust is crispy and the cheese is melted, creating a perfect harmony of flavors that represents the essence of Italian cuisine."
     },
     {
@@ -77,6 +84,7 @@
         "price": 13.99,
         "made_by": "Nonglak Srisawat",
         "food_origin": "Thailand",
+        "email": "sadia@gmail.com",
         "description": "Our Pad Thai is a classic Thai stir-fried noodle dish that combines a balance of sweet, sour, and salty flavors. It's prepared by stir-frying rice noodles with ingredients like tofu, eggs, tamarind paste, fish sauce, and a variety of vegetables. The dish is then garnished with crushed peanuts, bean sprouts, and lime wedges, providing a satisfying and authentic taste of Thailand."
     },
     {
@@ -87,6 +95,7 @@
         "price": 9.99,
         "made_by": "Michael Johnson",
         "food_origin": "United States",
+        "email": "sadia@gmail.com",
         "description": "Our Hamburger is a quintessential American favorite that boasts juicy, flame-grilled beef patties, sandwiched between soft buns. It is topped with fresh lettuce, tomatoes, onions, and your choice of cheese. Our secret sauce, made with a blend of ketchup, mayonnaise, and pickle relish, adds a tangy and savory kick, making every bite a delightful experience."
     },
     {
@@ -97,6 +106,7 @@
         "price": 28.99,
         "made_by": "Akihiko Tanaka",
         "food_origin": "Japan",
+        "email": "sadia@gmail.com",
         "description": "Our Sashimi Bowl is a feast for the senses, featuring an array of thinly sliced, fresh raw fish such as tuna, salmon, and yellowtail, served over a bed of sushi rice. It is accompanied by traditional Japanese garnishes such as pickled ginger, wasabi, and soy sauce, allowing you to enjoy the delicate flavors and textures of the ocean in every mouthful."
     },
     {
@@ -107,6 +117,7 @@
         "price": 7.99,
         "made_by": "Isabelle Martin",
         "food_origin": "France",
+        "email": "sadia@gmail.com",
         "description": "Our Creme Brulee is a decadent French dessert consisting of a rich custard base topped with a contrasting layer of hard caramel. To create this indulgent treat, we combine egg yolks, sugar, and vanilla, which are then gently baked and chilled. Before serving, we sprinkle a thin layer of sugar over the custard and caramelize it with a kitchen torch to create the signature crisp top."
     },
     {
@@ -117,6 +128,7 @@
         "price": 10.99,
         "made_by": "Ji-won Lee",
         "food_origin": "South Korea",
+        "email": "sadia@gmail.com",
         "description": "Kimchi Fried Rice is a popular Korean dish that brings together the bold flavors of kimchi with stir-fried rice and an assortment of vegetables and proteins. To prepare this dish, we start by sautéing kimchi, along with ingredients such as onions, garlic, and gochujang, in a hot pan. We then add cooked rice and other desired ingredients, such as diced vegetables, meat, or tofu, to create a satisfying and flavorful meal."
     },
     {
@@ -127,6 +139,7 @@
         "price": 11.99,
         "made_by": "David Thompson",
         "food_origin": "United Kingdom",
+        "email": "sadia@gmail.com",
         "description": "Our Fish and Chips is a classic British dish consisting of battered and deep-fried fish served alongside crispy and golden-brown chips. The fish, often cod or haddock, is coated in a light and crispy beer batter before being fried to perfection. Paired with our homemade chunky chips, this dish is served with tartar sauce and a wedge of lemon, offering a hearty and satisfying taste of the British seaside."
     }
 ]
