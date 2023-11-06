@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet";
 
 
 const Blog = () => {
     return (
         <div>
+          <Helmet>
+                <title>Eat-Link | Blog</title>
+            </Helmet>
   <h2 className="text-3xl text-center italic font-semibold mb-4">Blog Questions & Answers</h2>
   <div className="collapse collapse-plus bg-orange-200">
   <input type="radio" name="my-accordion-3" checked="checked" /> 

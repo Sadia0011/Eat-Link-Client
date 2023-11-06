@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 
 const SingleFoodPage = () => {
@@ -12,6 +13,9 @@ const handlePurchase=(id)=>{
 
     return (
         <div>
+            <Helmet>
+                <title>Food|{food_name}</title>
+            </Helmet>
             <h2 className="text-3xl italic font-semibold text-center my-5">{food_name}</h2>
           <div className='my-5 flex flex-col md:flex-row justify-center'>
           <div className='flex-1'>

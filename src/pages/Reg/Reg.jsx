@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import { Helmet } from "react-helmet";
 
 const Reg = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -61,6 +62,9 @@ const Reg = () => {
 
     return (
         <div>
+          <Helmet>
+                <title>Eat-Link | Registration</title>
+            </Helmet>
         <div className="hero-content flex-col ">
           <div className="text-center ">
             <h1 className="text-5xl font-bold text-orange-400">Register now!</h1>

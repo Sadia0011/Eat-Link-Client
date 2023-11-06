@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import useAuth from '../../Hooks/useAuth';
+import { Helmet } from "react-helmet";
 const SignIn = () => {
   const { signIn,googleSignIn } = useAuth()
   const [showPassword, setShowPassword] = useState(false);
@@ -49,6 +50,9 @@ const SignIn = () => {
   
   return (
     <div>
+      <Helmet>
+                <title>Eat-Link | Login</title>
+            </Helmet>
           <div className="hero-content flex-col ">
       <div className="text-center ">
         <h1 className="text-5xl font-bold text-orange-400">Login now!</h1>

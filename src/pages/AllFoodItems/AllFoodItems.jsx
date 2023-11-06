@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import FoodItemCard from "./FoodItemCard";
 import { useEffect, useState } from "react";
 import "./AllFoodItems.css"
+import { Helmet } from "react-helmet";
 
 const AllFoodItems = () => {
     const allFoodItems=useLoaderData()
@@ -73,6 +74,9 @@ else{
 
     return (
         <div>
+            <Helmet>
+                <title>Eat-Link | All Food</title>
+            </Helmet>
             <h2 className="text-4xl text-orange-400 text-center font-bold italic my-5">Food Menu</h2>
       
       <form onSubmit={handleSearch} className="flex mb-5 gap-2">
