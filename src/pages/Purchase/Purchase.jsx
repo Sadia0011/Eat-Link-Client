@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import Swal from 'sweetalert2'
 const Purchase = () => {
     const food=useLoaderData()
+
+    // const[Unavailable,setUnavailable]=useState(true)
     console.log(food)
-    const {food_name,img,category,price,quantity,made_by,food_origin,description}=food
+    const {_id,food_name,order,img,category,price,quantity,made_by,food_origin,description}=food
+    console.log(quantity)
     const navigate=useNavigate()
     const {user}=useAuth()
     const email=user.email
@@ -15,9 +18,10 @@ const Purchase = () => {
       category,
       price,
       quantity,
-      email
+      email,
+      order
     }  
-    console.log(purchaseProduct)
+    // console.log(purchaseProduct)
 
     const handlePurchase=()=>{
 
@@ -26,6 +30,14 @@ const Purchase = () => {
           icon: "warning",
           title: "User cannot buy the food that they added by themselves",
           text: "try to buy another item!",
+          confirmButtonText: "Cool",
+        });
+      }
+      else if(quantity==0){
+        Swal.fire({
+          icon: "warning",
+          title: "Unavailable.",
+          text: "You cannot buy this!",
           confirmButtonText: "Cool",
         });
       }
@@ -53,6 +65,36 @@ const Purchase = () => {
             .then((data) => {
               console.log(data);
               if ((data.insertedId = 1)) {
+                const updatedQuantity = quantity - 1;
+                const updatedOrder = order + 1;
+                // const updateItem={updatedQuantity,updatedOrder}
+                fetch(`http://localhost:5000/updateQuantity/${_id}`, {
+                  method: "PATCH",
+                  headers: {
+                    "content-type": "application/json",
+                  },
+                  body: JSON.stringify({ quantity: updatedQuantity ,
+                  order:updatedOrder}), 
+                })
+                  .then((res) => res.json())
+                  .then((data) => {
+                    console.log(data);
+                    
+                    if (updatedQuantity === 0) {
+
+                      fetch(`http://localhost:5000/makeUnavailable/${_id}`, {
+                        method: "PATCH",
+                        headers: {
+                          "content-type": "application/json",
+                        },
+                      })
+                        .then((res) => res.json())
+                        .then((data) => {
+                          setUnavailable(data);
+                          
+                        });
+                    }
+                  });
                 Swal.fire({
                   icon: "success",
                   title: "Added Food Successfully",
@@ -85,8 +127,11 @@ const Purchase = () => {
         <h3 className="text-xl"><span className='font-bold'>Category :</span> {category}</h3>
         <h3 className="text-xl"><span className='font-bold'>Price :</span> ${price}</h3>
         <h3 className="text-xl"><span className='font-bold'>Quantity :</span> {quantity}</h3>
+        <h3 className="text-xl"><span className='font-bold'>Order :</span> {order}</h3>
        <div className='flex flex-col lg:flex-row gap-3 justify-center items-center'>
-       <button onClick={handlePurchase} className='btn bg-orange-400 text-white'>Purchase</button>
+       
+       
+      <button onClick={handlePurchase} className='btn bg-orange-400 text-white'>Purchase</button>
        <button
        onClick={()=>{navigate(-1)}}
        className='btn bg-orange-400 text-white'>Back</button>
