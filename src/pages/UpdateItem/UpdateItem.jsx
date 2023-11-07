@@ -34,40 +34,40 @@ const UpdateItem = () => {
           email
         };
         console.log(updateItem);
-        // Swal.fire({
-        //     title: "Are you sure?",
-        //     text: "You won't be able to revert this!",
-        //     icon: "warning",
-        //     showCancelButton: true,
-        //     confirmButtonColor: "#3085d6",
-        //     cancelButtonColor: "#d33",
-        //     confirmButtonText: "Yes, update it!",
-        //   }).then((result) => {
-        //     if (result.isConfirmed) {
-        //       fetch(
-        //         `http://localhost:5000/updateItem/${item._id}`,
-        //         {
-        //           method: "PUT",
-        //           headers: {
-        //             "content-type": "application/json",
-        //           },
-        //           body: JSON.stringify(updateProduct),
-        //         }
-        //       )
-        //         .then((res) => res.json())
-        //         .then((data) => {
-        //           console.log(data);
-        //           if ((data.modifiedId = 1)) {
-        //             Swal.fire({
-        //               icon: "success",
-        //               title: "updated Product successfully",
-        //               text: "Congratulations!",
-        //               confirmButtonText: "Cool",
-        //             });
-        //           }
-        //         });
-        //     }
-        //   });
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, update it!",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              fetch(
+                `http://localhost:5000/updateItem/${item._id}`,
+                {
+                  method: "PUT",
+                  headers: {
+                    "content-type": "application/json",
+                  },
+                  body: JSON.stringify(updateItem),
+                }
+              )
+                .then((res) => res.json())
+                .then((data) => {
+                  console.log(data);
+                  if ((data.modifiedId = 1)) {
+                    Swal.fire({
+                      icon: "success",
+                      title: "updated Product successfully",
+                      text: "Congratulations!",
+                      confirmButtonText: "Cool",
+                    });
+                  }
+                });
+            }
+          });
         }
     return (
         <div className="mb-10">
@@ -88,6 +88,7 @@ const UpdateItem = () => {
               <label className="input-group">
                 <input
                   type="text"
+                  defaultValue={item.food_name}
                   placeholder="Food Name"
                   name="food_name"
                   className="input input-bordered w-full mr-4"
@@ -125,6 +126,7 @@ const UpdateItem = () => {
               <label className="input-group">
                 <input
                   type="text"
+                  defaultValue={item.category}
                   placeholder="Category"
                   name="category"
                   className="input input-bordered w-full mr-4"
@@ -142,6 +144,7 @@ const UpdateItem = () => {
                 <input
                   type="number"
                   placeholder="Quantity"
+                  defaultValue={item.quantity}
                   name="quantity"
                   className="input input-bordered w-full"
                   required
@@ -161,6 +164,7 @@ const UpdateItem = () => {
               <label className="input-group">
                 <input
                   type="number"
+                  defaultValue={item.price}
                   placeholder="Price"
                   name="price"
                   className="input input-bordered w-full mr-4"
@@ -177,6 +181,7 @@ const UpdateItem = () => {
               <label className="input-group">
                 <input
                   type="text"
+                  defaultValue={item.food_origin}
                   placeholder="Food Origin"
                   name="food_origin"
                   className="input input-bordered w-full"
@@ -196,6 +201,7 @@ const UpdateItem = () => {
               <label className="input-group">
                 <input
                   type="text"
+                  defaultValue={item.made_by}
                   placeholder="Made BY"
                   name="made_by"
                   className="input input-bordered w-full mr-4"
@@ -212,6 +218,7 @@ const UpdateItem = () => {
               <label className="input-group">
                 <input
                   type="text"
+                  defaultValue={item.img}
                   placeholder="Image URL"
                   name="img"
                   className="input input-bordered w-full mr-4"
@@ -231,6 +238,7 @@ const UpdateItem = () => {
               <label className="input-group">
                 <input
                   type="text"
+                  defaultValue={item.description}
                   placeholder="Short Description"
                   name="description"
                   className="input input-bordered w-full mr-4"

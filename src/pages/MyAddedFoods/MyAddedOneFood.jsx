@@ -11,7 +11,7 @@ const MyAddedOneFood = ({item}) => {
   <div class="p-6">
     {/* <h6 class="block mb-4  text-base font-semibold  uppercase">{price}</h6> */}
     <h4 class="block mb-2  text-2xl font-semibold">{food_name}</h4>
-   <Link to={`/updateItem`}>
+   <Link to={`/updateItem/${_id}`}>
    <button
     className='btn bg-orange-400 text-white'>Update</button>
    </Link>

@@ -4,6 +4,7 @@ import useAuth from '../../Hooks/useAuth';
 import Swal from 'sweetalert2'
 const Purchase = () => {
     const food=useLoaderData()
+    console.log(food)
     const {food_name,img,category,price,quantity,made_by,food_origin,description}=food
     const navigate=useNavigate()
     const {user}=useAuth()
@@ -19,6 +20,16 @@ const Purchase = () => {
     console.log(purchaseProduct)
 
     const handlePurchase=()=>{
+
+      if(food.email==email){
+        Swal.fire({
+          icon: "warning",
+          title: "User cannot buy the food that they added by themselves",
+          text: "try to buy another item!",
+          confirmButtonText: "Cool",
+        });
+      }
+     else{
       Swal.fire({
         title: "Are you sure?",
         text: "You want to purchase it !.",
@@ -54,6 +65,7 @@ const Purchase = () => {
       
         }
       });
+     }
     }
 
 
