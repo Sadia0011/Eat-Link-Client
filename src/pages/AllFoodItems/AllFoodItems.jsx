@@ -10,7 +10,7 @@ const AllFoodItems = () => {
     const [foods,setFoods]=useState([])
     const [realFoods,setRealFoods]=useState([])
     useEffect(()=>{
-        fetch("http://localhost:5000/itemsCount")
+        fetch("https://eatlink-server.vercel.app/itemsCount")
         .then(res=>res.json())
         .then(data=>setCount(data))
         // console.log({count})
@@ -31,7 +31,7 @@ pages.push(i)
 console.log(pages)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/items?page=${currentPage}&size=${itemsPerPage}`)
+        fetch(`https://eatlink-server.vercel.app/items?page=${currentPage}&size=${itemsPerPage}`)
             .then(res => res.json())
             .then(data => {
             setRealFoods(data)

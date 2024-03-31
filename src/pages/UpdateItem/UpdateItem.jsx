@@ -17,6 +17,7 @@ const UpdateItem = () => {
         const food_name = form.food_name.value;
         const category = form.category.value;
         const quantity = form.quantity.value;
+        const order = form.order.value;
         const price = form.price.value;
         const description = form.description.value;
         const made_by = form.made_by.value;
@@ -27,6 +28,7 @@ const UpdateItem = () => {
           food_name,
           category,
           quantity,
+          order,
           price,
           description,
           made_by,
@@ -45,7 +47,7 @@ const UpdateItem = () => {
           }).then((result) => {
             if (result.isConfirmed) {
               fetch(
-                `http://localhost:5000/updateItem/${item._id}`,
+                `https://eatlink-server.vercel.app/updateItem/${item._id}`,
                 {
                   method: "PUT",
                   headers: {
@@ -146,7 +148,24 @@ const UpdateItem = () => {
                   placeholder="Quantity"
                   defaultValue={item.quantity}
                   name="quantity"
-                  className="input input-bordered w-full"
+                  className="input input-bordered w-full mr-2"
+                  required
+                />
+              </label>
+            </div>
+            <div className="form-control w-1/2">
+              <label className="label">
+                <span className="label-text font-medium text-orange-400">
+                  Order
+                </span>
+              </label>
+              <label className="input-group">
+                <input
+                  type="number"
+                  placeholder="Order"
+                  defaultValue={item.order}
+                  name="order"
+                  className="input input-bordered w-full mr-2"
                   required
                 />
               </label>

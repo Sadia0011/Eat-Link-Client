@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 
 const Blog = () => {
     return (
-        <div>
+        <div >
           <Helmet>
                 <title>Eat-Link | Blog</title>
             </Helmet>
@@ -29,7 +29,7 @@ const Blog = () => {
 <div className="collapse collapse-plus bg-orange-200">
   <input type="radio" name="my-accordion-3" /> 
   <div className="collapse-title text-xl font-medium">
-  Different between Mongodb database vs mySQL database
+  Difference between Mongodb database vs mySQL database?
   </div>
   <div className="collapse-content"> 
     <p>MongoDB is a NoSQL, document-oriented database that stores data in JSON-like documents with dynamic schemas. It is best suited for unstructured data and scalable for large datasets. On the other hand, MySQL is a relational database that uses a structured query language (SQL) to manage and store data. It is suitable for structured data with complex relationships and is widely used for traditional applications.</p>

@@ -31,22 +31,22 @@ const Router = createBrowserRouter([
             {
                 path:"/allFoodItems",
                 element:<AllFoodItems></AllFoodItems>,
-                loader:()=>fetch("http://localhost:5000/allfooditems")
+                loader:()=>fetch("https://eatlink-server.vercel.app/allfooditems")
             },
             {
                 path:"/allfooditems/:id",
                 element:<SingleFoodPage></SingleFoodPage>,
-                loader:({params})=>fetch(`http://localhost:5000/allfooditems/${params.id}`)
+                loader:({params})=>fetch(`https://eatlink-server.vercel.app/allfooditems/${params.id}`)
             },
             {
                 path:"/purchase/:id",
                 element:<PrivateRoute><Purchase></Purchase></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/allfooditems/${params.id}`)
+                loader:({params})=>fetch(`https://eatlink-server.vercel.app/allfooditems/${params.id}`)
             },
             {
                 path:"/updateItem/:id",
                 element:<PrivateRoute><UpdateItem></UpdateItem></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/allfooditems/${params.id}`)
+                loader:({params})=>fetch(`https://eatlink-server.vercel.app/allfooditems/${params.id}`)
             },
             {
                 path:"/myAddedFood",

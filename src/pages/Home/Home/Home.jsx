@@ -7,7 +7,7 @@ import TopProduct from "../TopProduct/TopProduct";
 
 const Home = () => {
     return (
-        <div>
+        <div className="sm:p-2">
             <Helmet>
                 <title>Eat-Link | Home</title>
             </Helmet>

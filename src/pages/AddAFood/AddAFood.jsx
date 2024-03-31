@@ -10,6 +10,7 @@ const AddAFood = () => {
         const food_name = form.food_name.value;
         const category = form.category.value;
         const quantity = form.quantity.value;
+        const order = form.order.value;
         const price = form.price.value;
         const description = form.description.value;
         const made_by = form.made_by.value;
@@ -20,6 +21,7 @@ const AddAFood = () => {
           food_name,
           category,
           quantity,
+          order,
           price,
           description,
           made_by,
@@ -28,7 +30,7 @@ const AddAFood = () => {
         };
         console.log(newItem);
         fetch(
-          "http://localhost:5000/allfooditems",
+          "https://eatlink-server.vercel.app/allfooditems",
           {
             method: "POST",
             headers: {
@@ -125,6 +127,22 @@ const AddAFood = () => {
                   type="number"
                   placeholder="Quantity"
                   name="quantity"
+                  className="input input-bordered w-full mr-2"
+                  required
+                />
+              </label>
+            </div>
+            <div className="form-control w-1/2">
+              <label className="label">
+                <span className="label-text font-medium text-orange-400">
+                  Order
+                </span>
+              </label>
+              <label className="input-group">
+                <input
+                  type="number"
+                  placeholder="Order"
+                  name="order"
                   className="input input-bordered w-full"
                   required
                 />

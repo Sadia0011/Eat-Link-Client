@@ -16,7 +16,7 @@ const handlePurchase=(id)=>{
             <Helmet>
                 <title>Food|{food_name}</title>
             </Helmet>
-            <h2 className="text-3xl italic font-semibold text-center my-5">{food_name}</h2>
+            <h2 className="text-4xl italic text-orange-600 font-semibold text-center my-10 ">{food_name}</h2>
           <div className='my-5 flex flex-col md:flex-row justify-center'>
           <div className='flex-1'>
            <img src={img}
@@ -24,21 +24,25 @@ const handlePurchase=(id)=>{
            alt="" />
            </div>
            <div className='border border-orange-400 mx-5'></div>
-           <div className='flex-1 space-y-3'>
+           <div className='flex-1 space-y-3 p-2'>
             <h3 className="text-xl"><span className='font-bold'>Category :</span> {category}</h3>
             <h3 className="text-xl"><span className='font-bold'>Price :</span> ${price}</h3>
             <h3 className="text-xl"><span className='font-bold'>Quantity :</span> {quantity}</h3>
             <h3 className="text-xl"><span className='font-bold'>Made By :</span> {made_by}</h3>
             <h3 className="text-xl"><span className='font-bold'>Origin:</span> {food_origin}</h3>
             <h3 className="text-xl"><span className='font-bold'>Description:</span> {description}</h3>
-           <div className='flex flex-col justify-center items-center'>
+           <div className='flex flex-col md:flex-row  justify-start gap-2 items-center'>
            
-           <Link to={`/purchase/${_id}`}>
+          {quantity==0 ?
+           <button 
+           onClick={()=>handlePurchase(_id)} disabled
+           className='btn bg-orange-400 text-white'>Order Now</button>
+          : <Link to={`/purchase/${_id}`}>
            <button 
            onClick={()=>handlePurchase(_id)}
            className='btn bg-orange-400 text-white'>Order Now</button>
           
-           </Link>
+           </Link>}
             <button
            onClick={()=>{navigate(-1)}}
            className='btn bg-orange-400 text-white'>Back</button>

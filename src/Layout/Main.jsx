@@ -7,7 +7,7 @@ const Main = () => {
         <div className='font-BrygadaFamily flex flex-col min-h-screen'>
            <div className='flex-1'>
            <Navbar></Navbar>
-           <div className='container mx-auto '>
+           <div className='max-w-7xl mx-auto '>
            <Outlet></Outlet>
            </div>
            </div>

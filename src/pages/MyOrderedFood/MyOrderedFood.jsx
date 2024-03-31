@@ -8,7 +8,7 @@ const MyOrderedFood = () => {
     const {user}=useAuth();
     const[orderedItems,setOrderedItems]=useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/orderedItem?email=${user?.email}`)
+        fetch(`https://eatlink-server.vercel.app/orderedItem?email=${user?.email}`)
         .then(res=>res.json())
         .then(data=>setOrderedItems(data))
     },[user.email])
@@ -26,7 +26,7 @@ const MyOrderedFood = () => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/orderedOneItem/${id}`,{
+                fetch(`https://eatlink-server.vercel.app/orderedOneItem/${id}`,{
                     method:"DELETE"
                 })
                 .then(res=>res.json())
@@ -50,7 +50,7 @@ const MyOrderedFood = () => {
     return (
         <div>
            <h2 className="text-4xl text-center my-10 italic text-orange-400 font-semibold">My ordered Food</h2>
-            <div className='grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10'>
             {
                 orderedItems.map(item=><SingleOrderedItem
                 key={item._id}

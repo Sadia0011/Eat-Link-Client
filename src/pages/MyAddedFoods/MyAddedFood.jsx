@@ -6,7 +6,7 @@ const MyAddedFood = () => {
     const [userAddedItem,setUserAddedItem]=useState([])
     const {user}=useAuth()
     useEffect(()=>{
-        fetch(`http://localhost:5000/userAddedFood?email=${user?.email}`)
+        fetch(`https://eatlink-server.vercel.app/userAddedFood?email=${user?.email}`)
         .then(res=>res.json())
         .then(data=>setUserAddedItem(data))
     },[user?.email])
