@@ -11,7 +11,7 @@
 
 
 # site live link
-https://654b8f3ab8c6b52b8f810349--capable-rabanadas-0aea93.netlify.app/
+https://eatlink-d34c8.web.app/
 
 
   # Technologies Used
