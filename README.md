@@ -1,8 +1,25 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Eat-Link
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- user can purchase an item.
+- user can add an item but that user cannot purchase the item that he added.
+- user can update only the items they added.
+- Item that are selected by user can be deleted by them
+- user can login and register.
+
+
+
+# site live link
+https://654b8f3ab8c6b52b8f810349--capable-rabanadas-0aea93.netlify.app/
+
+
+  # Technologies Used
+  - The website is constructed using React with Vite as the build tool.
+  - Tailwind css is used as a css framework,daisyUI is used as component library.
+  - React Router is used for routing inside the website.
+  - React Icons are employed as the icon library.
+  - firebase is used for the authentication system. With this user can login or signup by 2 methods.
+  - For serverside i have used express js and vercel for hosting,For client side hosting i have used firebase.
+  - mongodb is used as a database.
+
